@@ -1,0 +1,33 @@
+{% extends 'inventory/base.html' %}
+
+{% block title %}
+Purchases | Django Delights
+{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+  <div class="table-responsive">
+    <table class="table table-striped w-75 ">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Menu Item</th>
+          <th>Price</th>
+          <th>Date Time</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for purchase in purchases %}
+        <tr>
+          <td>{{purchase.id}}</td>
+          <td>{{purchase.menu_item}}</td>
+          <td>{{purchase.price}}</td>
+          <td>{{purchase.date_time}}</td>
+        </tr>
+        {% endfor %}
+        <!-- Add more menu items as needed -->
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}

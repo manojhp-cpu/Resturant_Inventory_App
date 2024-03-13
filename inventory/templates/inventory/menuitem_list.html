@@ -1,0 +1,32 @@
+{% extends 'inventory/base.html' %}
+
+{% block title %}
+    MenuItem | Django Delights
+{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+  <div class="table-responsive">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>MenuItem</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for item in menuitems %}
+        <tr>
+          <td>{{item.id}}</td>
+          <td>{{item.item_name}}</td>
+
+          <td>{{item.price}}</td>
+        </tr>
+        {% endfor %}
+        <!-- Add more menu items as needed -->
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}

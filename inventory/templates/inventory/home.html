@@ -1,0 +1,96 @@
+{% extends 'inventory/base.html' %}
+
+{% block title %}
+My Home | Django Delights
+{% endblock %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Django Delight Restaurant</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  {% block style %}
+  <style>
+    /* Custom CSS for styling */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+    }
+    
+    .jumbotron {
+      background-image: url('https://www.google.com/imgres?imgurl=https%3A%2F%2Ft4.ftcdn.net%2Fjpg%2F02%2F94%2F26%2F33%2F360_F_294263329_1IgvqNgDbhmQNgDxkhlW433uOFuIDar4.jpg&tbnid=dKBzB2aPR_gn0M&vet=12ahUKEwik0J2umeSEAxXeo2MGHUpXAGUQMygBegQIARBL..i&imgrefurl=https%3A%2F%2Fstock.adobe.com%2Fsearch%3Fk%3Drestaurant&docid=6wKZbq7KClHX9M&w=770&h=360&q=restaurant%20image%201500*600&ved=2ahUKEwik0J2umeSEAxXeo2MGHUpXAGUQMygBegQIARBL'); /* Placeholder image */
+      background-size: cover;
+      color: #000000; /* white */
+      text-align: center;
+      padding: 100px 0;
+    }
+    .jumbotron h1 {
+      font-size: 3.5rem;
+    }
+    .feature-box {
+      text-align: center;
+      padding: 30px;
+    }
+    .feature-box i {
+      font-size: 3rem;
+      color: #007bff; /* blue */
+    }
+    .feature-box h3 {
+      margin-top: 20px;
+    }
+    
+  </style>
+  {% endblock %}
+</head>
+<body>
+
+
+  <!-- Jumbotron -->
+  <div class="jumbotron">
+    <div class="container">
+      <h1>Welcome to Django Delight Restaurant</h1>
+      <p class="lead">Serving Delicious Food with Love</p>
+    </div>
+  </div>
+
+  <!-- Features -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="feature-box">
+          <i class="bi bi-cup"></i>
+          <h3>Quality Ingredients</h3>
+          <p>We use only the freshest ingredients to create delicious meals.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="feature-box">
+          <i class="bi bi-emoji-heart-eyes"></i>
+          <h3>Passionate Chefs</h3>
+          <p>Our chefs are dedicated and passionate about crafting amazing dishes.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="feature-box">
+          <i class="bi bi-clock-history"></i>
+          <h3>Fast Service</h3>
+          <p>We strive to provide quick and efficient service to our customers.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+
+  <!-- Bootstrap JS (optional, only needed if you want to use Bootstrap JS features) -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+
+</body>
+</html>
+{% endblock %}
