@@ -10,7 +10,7 @@ Add Ingredient | Django Delights
       <div class="card">
         <div class="card-body">
           <h3 class="card-title text-center mb-4">Add Ingredient To Database</h3>
-          <form method="post" class="needs-validation" novalidate>
+          <form method="post" class="needs-validation" novalidate enctype="multipart/form-data">
             {% csrf_token %}
             {{ form.as_p}}
             <div class="text-center">

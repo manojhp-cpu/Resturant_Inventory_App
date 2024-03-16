@@ -21,6 +21,7 @@ class MenuItemForm(forms.ModelForm):
         widgets = {
             'item_name':forms.TextInput(attrs={'class':'form-control'}),
             'price': forms.TextInput(attrs={'class':'form-control'}),
+            'item_image': forms.FileInput(attrs={'class': 'form-control-file'}),
         }
 
 class RecipeRequirementForm(forms.ModelForm):

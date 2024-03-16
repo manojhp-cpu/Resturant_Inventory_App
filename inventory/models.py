@@ -7,6 +7,7 @@ class Ingredient(models.Model):
     quantity = models.DecimalField(max_digits=10, decimal_places=2)
     unit = models.CharField(max_length=20)
     unit_price = models.DecimalField(max_digits=10, decimal_places=2)
+    
 
     def __str__(self):
         return self.ingredient_name
@@ -18,9 +19,19 @@ class Ingredient(models.Model):
 class MenuItem(models.Model):
     item_name = models.CharField(max_length=50)
     price = models.DecimalField(max_digits=10, decimal_places=2)
-
+    item_image = models.ImageField(null=True,blank=True,upload_to='images/')
     def __str__(self):
         return self.item_name
+    
+    @property
+    def get_photo_url(self):
+        if self.item_image and hasattr(self.item_image, 'url'):
+            return self.item_image.url
+        else:
+            return "/static/images/user.jpg"
+        
+    def get_absolute_url(self):
+        return reverse('menu-list')
 
 
 class RecipeRequirement(models.Model):
